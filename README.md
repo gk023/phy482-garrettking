@@ -1,2 +1,2 @@
-# phy482-garrettking
-For PHY 482 homework
+# phy482-gk023
+For PHY 482 homework assignments
