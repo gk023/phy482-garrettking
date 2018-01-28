@@ -5,10 +5,12 @@ In this file, I will compile your feedback (and grade) for your project homework
 
 ## Assignment 2
 
+Garrett, I think reading this article first was a good idea. You have a lot to work with given the background here and you will need to decide where you want to take this. A historical discussion of the development of MS is fine as would be talking about cutting edge work on MS. Or loking at a specific set of results and discussing them in context. Either way you have a good foundation here. In reading the summary, I wondered why the motion of particles is governed by the Mathieu equations -- like how does that come about physically. If you choose to use this model to illustrate MS then anything you do going forward should include a discussion of how this mathematical model comes about. Next week, I'll be looking for you to narrow your focus on a specific aspects that you want to present in your paper (one of the above that I mentioned or something all together different). Great work so far.
 
+* Score: 20/20
 
 ## Assignment 1
 
-Garrett, the topic of mass spectrometry is very rich, so you will need to decide what to focus your efforts on as it can easily get unwieldy. I think you have done a great thing by focusing on review articles in your proposed list of papers. These can offer a great introduction to the field and what is important and also help you decide what to focus on. But these papers are LONG, so I tihnk it would be reasonable for you to sumamrize one of them for Friday. Great work and I'm looking forward to seeing what you decide to focus on.
+Garrett, the topic of mass spectrometry is very rich, so you will need to decide what to focus your efforts on as it can easily get unwieldy. I think you have done a great thing by focusing on review articles in your proposed list of papers. These can offer a great introduction to the field and what is important and also help you decide what to focus on. But these papers are LONG, so I think it would be reasonable for you to summarize one of them for Friday. Great work and I'm looking forward to seeing what you decide to focus on.
 
 * Score 20/20
