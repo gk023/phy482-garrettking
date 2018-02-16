@@ -1,0 +1,126 @@
+\documentclass[12pt]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,fullpage}
+\title{Summary of Mass Spectrometry Research for Project}
+\author{Garrett King}
+\begin{document}
+\maketitle
+
+Mass spectrometry (MS) is a technique that was introduced by J.J. Thompson in the early 1900s that has continued to grow and develop since. Although the method was originally used to understand a particular phenomenon, its applications have grown over the years to encompass multiple scientific discplines and commercial purposes. Early work in MS involved leveraging electricity and magnetism to create more sensitive tools and to select for different qualities. It was realized that the dynamics of particles could be taken into account in order to create mass spectra, a strategy that will be discussed in detail later on in the report. \cite{collo} Mass spectra have turned out to be useful in many areas, but nuclear physics is one subfield in particular that makes use of the capabilities of MS and could benefit from further use of the technique.\\
+
+Before discussing the development of MS, it is import to detail the typical process that all of the methods follow in order to create mass spectra. All of the methods analyze substances to create a spectrum of their masses through the application of principles of electromagnetism and mechanics to select for certain qualities.\cite{collo} While it is common to select for the charge to mass ratio, m/z, there are other detectors that can select for velocity, energy, and mass times energy over the charge squared.\cite{AMS} Looking at trajectories of particles and using the relevant equations to determine their masses is another way to create a mass spectrum. A majority of the methods involve the ionization of particles in vacuo prior to entering into one or more selection devices, which are typically in regions of low pressure. Once the particles pass through the mass analyzer regions, they go on to the detectors and the signals measured are used to create a spectrum for the given particles.\cite{collo} \\
+
+While MS has grown in its applications and techniques, it began in J.J. Thompson's quest to understand ''canal rays'' at the start of the 1900s. These rays were found to carry the same charge as cathode rays, but with the opposite sign; however, unlike the cathode rays, its constituents did not have a uniform m/z. This inspired Thompson to create a parabola spectrograph. This device was the first to scan for different mass to charge ratios in order to create a spectrum of the masses contained in the substance being studied. Using a Faraday cup to detect ions and get counts for how many were present, it was possible to plot the intensity of the different m/z in a sample. To scan for ions of different masses, Thompson tuned magnetic fields to select for certain m/z to pass through a slit on a metal sheet. This process of selecting certain ions and getting counts to determine their m/z gave birth to all of the concepts that make up MS.\cite{collo}\\
+
+After Thompson's initial work on the subject, most of the development that followed involved buidling upon his methods in order to get better resolutions and measurements. Aston followed up Thompson's work and made measurements that confirmed the existence of hundreds of isotopes. Dempster refined Thompson's method by using the knowledge that a particle with a given m/z at a constant velocity v in a constant magnetic field B would follow a uniqe radius r, given by:
+
+\begin{equation}
+\frac{m}{z}=\frac{Br}{v}
+\end{equation}
+
+These particles were taken along a 180 degree turn at this radius to get to a detector. Selecting for B, v, and r allowed him to scan for different m/z and create a spectrum. The velocity selector made use of Wein's crossed E and B fields.\cite{collo} In the set up of crossed E and B fields, it is possible to select for a charged particle that experiences zero net force at a certain velocity in that region. Particles with other velocities experience a force and be moved off of the trajectory that would carry them through the slit.\cite{AMS}  Wein's crossed fields rely on the application of $F = q(v\times B + E)$ for a charged particle moving through this region. Balancing the direction and magnitudes of the electric and magnetic forces allows for the selection of a given velocity to make it through into Dempster's detector.\\
+
+While much of the early work involved using electricity and magnetism as the main tools for the selection of particles, more methods were pioneered that involved the use of dynamics. Wolfgang Pauld developed many different methods that leveraged the particles motion in a given field in order to create mass spectra. Two methods of his that are similar in their approach are the quadrupole mass spectrometer and the ion trap. Both of these techniques arise from the idea that a particle is confined when it is bound elastically to a central axis. In order to have this elasticity, it is necessary that a restoring force of the form $F=-cr$ acts on a particle to pull it back as it moves away from the origin. To have a force of this form, one should have a potential that looks like:
+
+\begin{equation}
+\Phi \sim (\alpha x^2 + \beta y^2 + \gamma z^2)
+\end{equation}
+
+Paul chose a quadrupole set up knowing that the electostatic potential behaved like $r^{m/2}$, where m was the number of poles in his mass analyzer set up. The condition that $\nabla^2 \Phi = 0$ imposed another condition on the set up of the instrument. One option that satisfied this equation was $\alpha = -\gamma = 1, \beta = 0$, which is used in quadrupole MS. His set up involved two pairs of hyperbolic poles on a given axis being separated by a distance $r_0$ and with potentials of $\pm \Phi_0$ applied on either end, giving rise to the following equation:
+
+\begin{equation}
+\Phi =\frac {\Phi_0(x^2-z^2)}{r_0^2}
+\end{equation}
+
+And causing electrostatic fields of $E_x = -\frac{\Phi_0}{r_0^2}x, E_y=0, and E_z = \frac{\Phi_0}{r_0^2}z$. In this set up, particles enter the mass analyzer region moving along the y-axis and have the following equations of motion in x and z:
+
+
+\begin{eqnarray*}
+\ddot{x} + \frac{e}{mr_0^2}(U+Vcos(\omega t))x &=& 0\\
+\ddot{z} - \frac{e}{mr_0^2}(U+Vcos(\omega t))z &=& 0\\
+\end{eqnarray*}
+
+Where U is the value of an electrostatic potential, V is the amplitude of an rf voltage oscillating at $\omega$, m is the mass of the particle, and e is its charge. Using the following dimensionless parameters, $a= \frac{4eU}{mr_0^2\omega^2}, q = \frac{2eV}{mr_0^2\omega^2}$, and $\tau = \frac{\omega t}{2}$, the equations can be rewritten as:
+
+\begin{eqnarray*}
+\frac{d^2x}{d\tau^2} + (a+2qcos(2\tau))x &=& 0\\
+\frac{d^2z}{d\tau^2} - (a+2qcos(2\tau))z&=& 0\\
+\end{eqnarray*}
+
+Which are in the form of the Mathieu equations. These equations have two solutions, which are stable and unstable motion. Particles that satisfy the conditions for stability in the set up will have limited oscillations in x and z, which is what this set up was intended to do. If a particle does not meet the stability criteria, then it will oscillate without bound in either x, z, or both x and z and hit the walls of the set up, not making it to the detector. Because of this fact, if one understands the conditions for stability, it is possible to make a device that analyzes the different masses contained in a substance. According to Paul, particles with the same m/z lie on the stable operating line a/q = 2U/V = constant. It is detailed that, for U = 0, 0 \textless q \textless 0.92 are stable and that by changing U and V together to keep their ratio constant, different masses on the operating line can be focused and analyzed.\\
+
+Another case that satisfied the condition of the Laplacian being zero is $\alpha = \beta = 1, \gamma = -2$, which is used in the ion trap. This device consists of a hyperbolic cap surrounded by a hyperbolic ring in the x-y plane. While the set up is different, it follows the same principles of stability to trap charges. Particles on the same stable operating line will oscillate at different frequencies. By picking an rf such that it causes resonance for a particle of given mass, one can make a mass spectrum. When the selected particle resonates, it is allowed to escape through a bore hole in the device and into a detector. By scanning across different frequencies, the ion trap can be used to create a spectrum.\cite{paul}\\
+
+Another method of detection that makes use of the dynamics of a given particle is the Time of Flight (TOF) detector. This technique uses the knowledge that a partcile with a give m/z moves a certain distance under the influence of an electrostatic potential U in a time t such that:
+
+\begin{equation}
+t\varpropto \sqrt{m/z}\frac{1}{\sqrt{U}}
+\end{equation}
+
+Using this relationship and analyzing the trajectories of different particles in a detector, it is possible to create a mass spectrum. Cyclotrons make for MS detectors in addition to particle accelerators, since particles of a given m/z have a given cyclotron frequency f that satisfies\cite{collo} :
+
+\begin{equation}
+\frac{m}{z} = \frac{B}{2\pi f}
+\label{eq:cyc}
+\end{equation}
+
+
+Sun et al. provide an example of the use of TOF in combination with cyclotron MS in their measurement of the masses of exotic nuclides. In this experiemnt, exotic nulcides were created by high energy collisions of $^{238}$U with a Be target. The TOF detector observed how many revolutions per second different particles in the accelerator made and used this information to determine the different m/z in the sample. This experiment demonstrated both the power and the possible limitations of the method. The researchers were able to identify 71 nuclides, with 35 of them hitting typical precison for one of these measurements; however, the fact that two different particles could have the same charge to mass ratio led to the contamination of some of the peaks of the mass spectrum. Because of this, they could only indentify the 71 nuclies mentioned in their publication, even though much more were observed to have been created. Even without all of the peaks, it was possible to compare to the theoretical predictions of the previously unknown massses and determine their predictive power. Looking at where theory failed to match up with the data, the researchers were able to account for the features of the theory that were causing it to not quite describe the data.\cite{sun}\\
+
+Heading forward on this project, I want to delve more into how MS has been applied in nuclear physics and the possible applications that it still has. At this point, after reading Sun et al. and the overiew paper, MS seems to have a big role in testing theories related to nuclear structure. I am aware that understanding the masses of these exotic nuclides close to the neutron and proton drip line will inform these theories and our ideas about nucleosynthesis. In order to give a more detailed idea of why precision mass measurements are important, I plan to look for an overview paper on nuclear physics about how these measurements play into understanding the theory. It would also be interesting to see if any measurements have been made since Sun et al. that would further back the idea that MS is a powerful and informative tool for this field. I have also found another paper that talks about using cyclotron MS to create mass spectra. In this article, the author talks about ways to avoid the problem of contamination due to different peaks; however, it may not be a fair comparison, since he deals with light nuclei at lower energy than Sun et al. In this method, the use of gold foil thick enough to stop the contaminant, but not the desired particle, helps to filter what is being detected. In this case, the particle being selected is $^{14}$C and $^{14}$N is being stopped. Both are ionized to carry the same charge and both will be brought into resonance at the same frequency, following Equation \eqref{eq:cyc}. This is also done at a beam energy of 62 MeV to prevent any reaction products contaminating the measurements. It is also proposed that a detector for the energy loss with respect to distance could be employed, since different particles will have different signatures in this detector. Particles of the same m/z having the same resonance frequency may not be a problem if there is a way to tell them apart.\cite{dating} Altogher, the research that I have so far provides a solid basis for understanding MS and different methods to apply it. Another interesting topic in MS that has come up is Tadem MS, which combines different methods to select for different qualities. By reading more into applications of MS in general and about how Tandem MS is employed to get better resolution, I hope to understand how it could limit error with a more detailed selection process. Dempster's use of crossed E and B fields is already and example of using two types of analyzers to improve the resolution of a measurement. It would be interesting to know if something similar exists in cyclotron MS to improve resolution.\\
+
+
+\noindent\textbf{Update-- Mathematical Models with Nuclear Physics Context}\\
+
+To further understand how MS is being used to obtain precision mass measurements, I read about the experiment performed by Gaudefroy et al. where the masses of 16 light exotic nuclei near the neutron drip line were measured. The setup used for this experiment involved a TOF detector in combination with a loss of energy ($\Delta E$) detector. TOF detectors connect to the model used in Equation \eqref{eq:cyc}, where a given m/z corresponds to particular cyclotron frequency. Keeping track of the number of revolutions made per second by particles in the accelerator with a given magnetic field allows researchers to figure out what m/z are in the sample. In this particular study, exotic nuclei which form halo structures had their masses determined for the first time. Using the precision mass data in combination with nuclear matter radii determined by interaction cross section measurements, the researchers were able to constrain the model of halo formation for these nuclei. This experiment was another example of data being used to better understand and constrain theoretcial predictions. \cite{exotic}\\
+
+This experiment, while performed in 2012, seemed to line up with the goals of the 2015 Long Range Nuclear plan, which gave a list of objectives that were deemed important to advance the field. According to this long range plan, nuclear physics seeks to understand the the basic fundamental interactions governing the arrangement of subatomic matter and the limits of nuclear existence. In the domain of nuclear structure studies, the limits of nuclear existence can be understood by measuring masses that exist along the neutron drip line- like in Gaudefroy et al.-, along the proton drip line, and of superheavy nuclei. While mass measurements had been made along the proton drip line for elements up to Z=83 when this plan was published, measurements had only been made along the neutron drip line up to Z=8. The report discussed that understanding the magic numbers for nuclear shells- 2, 8, 20, 28, 50, 82, and 126- was important to our understanding of nuclear structure. Mass measurements at the time found the existence of $^{24}$O and $^{26}$O, which seemed to suggest that N=14 and 16 were magic numbers for neutron rich nuclei. These measurements led to new ab intio theories to understand how these nuclei could exist, adding to the idea that better measurements inform our predictive capabilities. The report discusses how measuring key istopic chains that encompass multiple magic numbers, like oxygen, is important for informing theories on nuclear structure and how nuclei can exist in the extreme region of stability. \cite{lrp}\\
+
+An MS technique was specifically mentioned in this plan in discussing the measurement of superheavy nuclei. Ion traps were used to extend our knowledge of masses from Z=110 to Z=111. \cite{lrp} The ion trap follows a similar mathematical model as the quadrupole mass analyzer, but with a different electrostatic potential, given by:
+
+\begin{equation}
+\Phi =\frac {\Phi_0(r^2-2z^2)}{r_0^2+2z_0^2}
+\end{equation}
+
+Much like the quadrupole mass analyzer, the ion trap is based on the idea of stable oscillations according to the Mathieu equations. In this case, the factors of z in those equations are scaled up by 2 and the x equations are replaced by ones in r, the radius in cylindrical coordinates. Particles with a given m/z will lie on the stable operating line and oscillate in the ion trap. By setting the rf voltage frequency to the frequency that a particle with a given mass oscillates in the trap, resonance will occur. Scanning for multiple masses can thus be used to create a mass spectrum. \cite{paul} In the Long Range Plan, it was stated that the hope was to measure the masses of nuclei out to Z=114 and beyond. The motivation for measurements in this region is understanding how the nuclear and Coulomb force interact at the limits of mass and charge. With better information in this range, it is hoped that a more fundamental understanding of the nuclear force can be obtained. \cite{lrp}\\
+
+Another study that combined the idea of making new mass measurements to inform theoretical predictions was performed by Sobiczewski and Litvinov. In this paper, an analysis of 10 different mass models was conducted to understand if there was a connection between how well they described the data and how well they predicted new mass measurements beyond the region used to create the model. It was found that these models did very well for the data in the region that was used to create them, which did not seem unsurprising. The most striking part of the report was the finding that there was no connection between a model that described known data well and one that made accurate predictions for new data. \cite{sobi} The take away from this article was that it does not seem wise to rely solely on theoretical predictions in order to inform our models of nuclear structure. Instead, it seems that there should be an initiative to make more precision mass measurements in these important regions in order to create robust theories of nuclear structure.
+
+
+\begin{thebibliography}{8}
+
+\bibitem{collo}
+
+S. Maher, F. P. M. Jjunju and S. Taylor. (2015). \textit{Colloquium}: 100 years of mass spectrometry: Perspectives and future trends. \textit{Rev. Mod. Phys.}, \textit{87(1), 113-135}, 
+\url{https://dx.doi.org/10.1103/RevModPhys.87.113}
+
+\bibitem{AMS}
+D. Elmore and F.M. Phillips. (1987). Accelerator Mass Spectrometry for Measurement of Long-Lived Radioisotopes. \textit{Science}, \textit{236(4801)}, pp. 534-550,
+\url{https://dx.doi.org/10.1126/science.236.4801.543}
+
+\bibitem{paul}
+W. Paul. (1990). Electromagnetic Traps for Charged and Neutral Particles. \textit{Rev. Mod. Phys.}, \textit{62(3)}, 521-540,
+\url{ https://dx.doi.org/10.1103/RevModPhys.62.531}
+
+\bibitem{sun}
+B. Sun et. al. (2008). Nuclear structure studies of short-lived neutron-rich nuclei with the novel large-scale isochronous mass spectrometry at the FRS-ESR facility. \textit{Nucl. Phys. A}, \textit{812(1-4)}, 1-12, \url{https://doi.org/10.1016/j.nuclphysa.2008.08.013}
+
+\bibitem{dating}
+D. Elmore and F.M. Phillips. (1987). Radioisotope Dating with a Cyclotron. \textit{Science}, \textit{196(4289)}, pp. 489-494, \url{https://dx.doi.org/10.1126/science.196.4289.489}
+
+\bibitem{exotic}
+L. Gaudefroy et al. (2012). Direct Mass Measurements of $^{19}$B, $^{22}$C, $^{29}$F, $^{31}$Ne, $^{34}$Na and Other Light Exotic Nuclei. \textit{Phys. Rev. Lett.}, \textit{109}, 202503, \url{https://dx.doiorg/10.1103/PhysRevLett.109.202503}
+
+\bibitem{lrp}
+\textit{Reaching for the Horizon: The 2015 Long Range Plan for Nuclear Science}. The United States Department of Energy and the National Science Foundation. (2015). \url{https://science.energy.gov/np/nsac/}
+
+\bibitem{sobi}
+A. Sobiczewski and Y.A. Litvinov. (2014). Predictive power of nuclear-mass models. \textit{Phys. Rev. C}, \textit{90(1)}, 017302, \url{https://dx.doi.org/10.1103/PhysRevC.90.017302}
+\end{thebibliography}
+
+\end{document} 
