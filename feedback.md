@@ -3,6 +3,12 @@
 
 In this file, I will compile your feedback (and grade) for your project homework problems in reverse chronological order. Please do not alter this file and if you do, make sure to add and commit the new version to your repository before turning in the next assignment. Thanks, Danny
 
+## Assignment 5
+
+Garrett, great update. I think you are pretty much done. You probably want to merge the update you made into the overall paper in some way so that it follows more clearly. You will probably also need something that closes your paper once you do that. Great work so far!
+
+* Score: 20/20
+
 ## Assignment 4
 
 Garrett, this is looking really great. You have done a great job on connecting all the papers and providing a nice coneptual overview of the models associated with MS. I appreciate the reflection at the end of the paper, which I agree with. I think you have a lot on your plate with this, but you can probably pick one ot two aspects to present from the nuclear physics perspective and call it nearly complete. There are some small typos and misspellings throughout the current writeup so check for those in the future. Great work!
