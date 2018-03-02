@@ -3,6 +3,12 @@
 
 In this file, I will compile your feedback (and grade) for your project homework problems in reverse chronological order. Please do not alter this file and if you do, make sure to add and commit the new version to your repository before turning in the next assignment. Thanks, Danny
 
+## Assignment 6
+
+Garrett, great work over the last 6 weeks. I think you have to just do a little light editing this week because your draft is probably done at this point. Good job!
+
+* Score: 20/20
+
 ## Assignment 5
 
 Garrett, great update. I think you are pretty much done. You probably want to merge the update you made into the overall paper in some way so that it follows more clearly. You will probably also need something that closes your paper once you do that. Great work so far!
